@@ -1,1 +1,4 @@
 ftpuser
+password@123
+kiruba
+kiruba@123

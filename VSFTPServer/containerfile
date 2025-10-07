@@ -2,9 +2,10 @@ FROM fedora:latest
 MAINTAINER kirubakaran.keeran@qubecinema.com
 
 RUN yum update -y\
-	yum install vsftpd net-tools which \
+	yum install vsftpd net-tools which db4-utils db4 \
 	yum clean all
 
+#Move the configs files to there respective directories.
 COPY vsftpd_confs/vsftpd_users.txt /etc/vsftpd/
 COPY vsftpd_confs/vsftpd.conf /etc/vsftpd/
 COPY vsftpd_confs/vsftpd.virtual /etc/pam.d/
